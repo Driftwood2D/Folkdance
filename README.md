@@ -1,5 +1,5 @@
 # Folkdance
-An implementation of common player/entity interactions for Driftwood 2D
+An implementation of common player/entity interactions for Driftwood 2D.
 
 This Driftwood 2D library will provide solid default implementations for entity AI, entity-entity and player-entity interactions, choreography, combat, items, inventory, and other things the player and entities need to interact with each other and the world in meaningful ways.
 
