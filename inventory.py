@@ -131,6 +131,7 @@ class InventoryManager:
             if item in self.__inventory:
                 Driftwood.log.msg("WARNING", "Folkdance", "Inventory", "load", "duplicate item", item)
             self.__inventory[item] = data[item]
+        self.__refresh_weight()
         return True
 
     def loads(self, data):
@@ -149,6 +150,7 @@ class InventoryManager:
             if item in self.__inventory:
                 Driftwood.log.msg("WARNING", "Folkdance", "Inventory", "loads", "duplicate item", item)
             self.__inventory[item] = data[item]
+        self.__refresh_weight()
         return True
 
     def save(self, varname="inventory"):
@@ -168,3 +170,10 @@ class InventoryManager:
     def dump(self):
         """Return the item dictionary."""
         return self.__inventory
+
+    def __refresh_weight(self):
+        """Recalculate how much the inventory weighs."""
+        self.holding = 0
+        for item in self.__inventory.values():
+            self.holding += item["quantity"] * item["weight"]
+
