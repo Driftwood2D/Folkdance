@@ -141,7 +141,8 @@ class InventoryManager:
 
         Returns True if succeeded, False if failed."""
         try:
-            data = ast.literal_eval(json.loads(data))
+            if type(data) is str:
+                data = ast.literal_eval(json.loads(data))
         except:
             Driftwood.log.msg("Error", "Folkdance", "Inventory", "loads", "could not load items")
             return False
@@ -157,7 +158,7 @@ class InventoryManager:
 
     def save(self, varname="inventory"):
         """Save the item dictionary to the currently open database."""
-        Driftwood.database.put(varname, str(self.__inventory))
+        Driftwood.database.put(varname, self.__inventory)
         return True
 
     def restore(self, varname="inventory"):
