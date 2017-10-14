@@ -38,8 +38,8 @@ class InventoryManager:
     def __init__(self, size=-1):
         # Maximum weight of items that can be held in the inventory.
         self.size = size
-        
-        # Amount of items currently being held.
+
+        # Weight of items currently being held.
         self.holding = 0
 
         # A dictionary of item names mapped to item specs.
