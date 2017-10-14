@@ -1,6 +1,6 @@
 ####################################
 # Driftwood 2D Folkdance Engine    #
-# stdlib/widget.py                 #
+# inventory.py                     #
 # Copyright 2017 Michael D. Reiley #
 # & Paul Merrill                   #
 ####################################
@@ -24,6 +24,8 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 # **********
+
+# Folkdance Inventory Manager
 
 import ast
 import json
