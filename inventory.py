@@ -36,7 +36,7 @@ class InventoryManager:
     
     Manages an inventory or bag."""
     def __init__(self, size=-1):
-        # Maximum weight of items that can be held in the inventory.
+        # Maximum weight of items that can be held in the inventory. -1 to disable.
         self.size = size
 
         # Weight of items currently being held.
